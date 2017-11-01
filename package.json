@@ -1,0 +1,22 @@
+{
+  "name": "inktober",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --include-path / --output-style minified -o dist/css src/sass",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "build": "npm run scss && npm run autoprefixer"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.13",
+    "postcss-cli": "^4.1.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
