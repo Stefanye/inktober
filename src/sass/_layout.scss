@@ -1,0 +1,63 @@
+@charset 'utf-8';
+
+%container {
+    padding: {
+        left: 16px;
+        right: 16px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        width: 1024px;
+    }
+}
+
+.header {
+    margin: {
+        top: 16px;
+        bottom: 16px;
+    }
+    &_wrapper {
+        display: block;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        width: 350px;
+        &_logo {
+            display: block;
+            width: 350px;
+        }
+    }
+}
+
+.content {
+    &_container {
+        @extend %container;
+        &_title {
+            margin: {
+                bottom: 24px;
+            }
+            text: {
+                align: center;
+            }
+        }
+    }
+}
+
+.footer {
+    margin: {
+        top: 64px;
+        bottom: 16px;
+    }
+    &_container {
+        @extend %container;
+        color: #666;
+        font: {
+            size: 14px;
+        }
+        text-align: center;
+    }
+}
