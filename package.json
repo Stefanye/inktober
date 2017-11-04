@@ -1,0 +1,29 @@
+{
+  "name": "inktober",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --include-path / --output-style compressed -o dist/css src/sass",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "js": "uglifyjs node_modules/jquery/dist/jquery.js node_modules/lightbox2/dist/js/lightbox.js -o dist/js/main.js",
+    "copy": "copyfiles -f node_modules/lightbox2/dist/images/* dist/images",
+    "prefix": "npm run scss && npm run autoprefixer",
+    "build": "npm run scss && npm run autoprefixer && npm run js && npm run copy"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "copyfiles": "^1.2.0",
+    "jquery": "^3.2.1",
+    "lightbox2": "^2.9.0",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.13",
+    "postcss-cli": "^4.1.1",
+    "uglify-js": "^3.1.6"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
