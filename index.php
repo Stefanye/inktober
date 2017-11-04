@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Condensed:400,700|Roboto+Slab:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="/dist/css/main.css" rel="stylesheet">
+    <script src="/dist/js/main.js"></script>
 </head>
 <body>
     <header class="header">
@@ -24,7 +25,7 @@
                         <a class="navigation_list_item_link otherStyle isActive" href="/">Drawings</a>
                     </li>
                     <li class="navigation_list_item">
-                        <a class="navigation_list_item_link otherStyle" href="/tools">Tools</a>
+                        <a class="navigation_list_item_link otherStyle" href="/tools.php">Tools</a>
                     </li>
                 </ul>
             </nav>
@@ -35,8 +36,15 @@
 
     <footer class="footer">
         <div class="footer_container">
-            <a href="https://schatten.hu">schatten.hu</a> &copy; <?php echo date("Y"); ?> - A <a href="https://github.com/Stefanye/inktober" target="_blank">Github</a> project
+            <a href="https://schatten.hu">schatten.hu</a> &copy; <?php echo date("Y"); ?> - A <a href="https://github.com/Stefanye/inktober" target="_blank">Github</a> project.
         </div>
     </footer>
+
+    <script>
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true
+        })
+    </script>
 </body>
 </html>

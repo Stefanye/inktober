@@ -12,69 +12,115 @@ $selector: 'art';
         text-align: center;
     }
     &_wrapper {
-        align-items: start;
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: repeat(6, 1fr);
-        justify-items: center;
+        @media screen and (min-width: 530px) {
+            column-count: 2;
+            column-gap: 16px;
+        }
+        @media screen and (min-width: 700px) {
+            column-count: 4;
+        }
+        @media screen and (min-width: 1024px) {
+            column-count: 5;
+        }
         &_content {
-            overflow: hidden;
-            position: relative;
-            &:nth-child(2) {
-                grid-column: span 3;
-                grid-row: span 2;
+            background: {
+                color: #fff;
+            }
+            margin: {
+                bottom: 16px;
+            }
+            padding: {
+                bottom: 6px;
+            }
+            @media screen and (min-width: 530px) {
+                background: {
+                    color: transparent;
+                }
+                overflow: hidden;
+                padding: {
+                    bottom: 0;
+                }
+                position: relative;
             }
             &::before {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                border: 200px solid rgba(0, 0, 0, 0.7);
-                opacity: 1;
-                visibility: visible;
-                transition: all 0.3s ease-in-out;
-                content: '';
+                @media screen and (min-width: 530px) {
+                    border: 200px solid rgba(18, 1, 11, .6);
+                    bottom: 0;
+                    content: '';
+                    left: 0;
+                    opacity: 1;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transition: all 0.3s ease-in-out;
+                    visibility: visible;
+                }
             }
            &:hover::before {
-                border: 0 solid rgba(0, 0, 0, 0.7);
-                opacity: 0;
-                visibility: hidden;
+                @media screen and (min-width: 530px) {
+                    border: 0 solid rgba(18, 1, 11, .6);
+                    opacity: 0;
+                    visibility: hidden;
+                }
             }
             &_image {
                 display: block;
                 width: 100%;
+                @media screen and (min-width: 530px) {
+                    opacity: .1;
+                }
+                .#{$selector}_wrapper_content:hover & {
+                    opacity: 1;
+                }
             }
             &_caption {
-                align-items: center;
-                bottom: 0;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                justify-content: center;
-                left: 0;
-                position: absolute;
-                right: 0;
-                top: 0;
-                z-index: 5;
+                text-align: center;
+                @media screen and (min-width: 530px) {
+                    align-items: center;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 5;
+                }
                 .#{$selector}_wrapper_content:hover & {
-                    opacity: 0;
+                    @media screen and (min-width: 530px) {
+                        opacity: 0;
+                    }
                 }
                 &_title {
-                    color: #fff;
+                    color: #222;
+                    display: block;
                     font: {
-                        size: 16px;
+                        size: 20px;
                         weight: 700;
                     }
                     margin: {
-                        bottom: 10px;
+                        top: 6px;
+                    }
+                    @media screen and (min-width: 530px) {
+                        color: #fff;
+                        margin: {
+                            bottom: 10px;
+                            top: 0;
+                        }
+                        text-shadow: 0 1px 0 #000;
                     }
                 }
                 &_day {
-                    color: #bbb;
+                    color: #444;
                     font: {
                         family: $secondary-font;
-                        size: 14px;
+                        size: 16px;
+                    }
+                    @media screen and (min-width: 530px) {
+                        color: #bbb;
+                        text-shadow: 0 1px 0 #000;
                     }
                 }
             }

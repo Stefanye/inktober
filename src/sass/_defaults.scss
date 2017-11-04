@@ -23,7 +23,7 @@ body {
     line-height: 1.5;
 }
 
-a:not(.otherStyle) {
+a:not(.otherStyle, .lb-close) {
     border: {
         bottom: 1px solid $link-color;
     }
