@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Inktober project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Condensed:400,700|Roboto+Slab:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="/dist/css/main.css" rel="stylesheet">
     <script src="/dist/js/main.js"></script>
