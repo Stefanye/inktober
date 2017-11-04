@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --include-path / --output-style compressed -o dist/css src/sass",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
-    "js": "uglifyjs node_modules/jquery/dist/jquery.js node_modules/lightbox2/dist/js/minilightbox.js -o dist/js/main.js",
+    "js": "uglifyjs node_modules/jquery/dist/jquery.js node_modules/lightbox2/dist/js/lightbox.js -o dist/js/main.js",
     "copy": "copyfiles -f node_modules/lightbox2/dist/images/* dist/images",
     "prefix": "npm run scss && npm run autoprefixer",
     "build": "npm run scss && npm run autoprefixer && npm run js && npm run copy"

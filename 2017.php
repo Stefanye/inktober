@@ -152,7 +152,6 @@
         ],
     ];
 ?>
-
 <section class="art">
     <span class="art_title">- 2017 -</span>
 
