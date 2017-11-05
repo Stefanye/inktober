@@ -18,6 +18,14 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Condensed:400,700|Roboto+Slab:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="/dist/css/main.css" rel="stylesheet">
     <script src="/dist/js/main.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109233355-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109233355-1');
+    </script>
 </head>
 <body>
     <header class="header">
