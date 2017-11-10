@@ -20,7 +20,7 @@ $selector: 'art';
             column-count: 4;
         }
         @media screen and (min-width: 1024px) {
-            column-count: 5;
+            column-count: 6;
         }
         &_content {
             background: {
@@ -44,7 +44,9 @@ $selector: 'art';
             }
             &::before {
                 @media screen and (min-width: 530px) {
-                    border: 200px solid rgba(18, 1, 11, .6);
+                    background: {
+                        color: rgba(186, 183, 185, .6);
+                    }
                     bottom: 0;
                     content: '';
                     left: 0;
@@ -52,19 +54,17 @@ $selector: 'art';
                     position: absolute;
                     right: 0;
                     top: 0;
-                    transition: all 0.3s ease-in-out;
-                    visibility: visible;
+                    transition: opacity .5s ease-in-out;
                 }
             }
            &:hover::before {
                 @media screen and (min-width: 530px) {
-                    border: 0 solid rgba(18, 1, 11, .6);
                     opacity: 0;
-                    visibility: hidden;
                 }
             }
             &_link {
                 display: block;
+                text-decoration: none;
                 &_image {
                     display: block;
                     width: 100%;
@@ -106,12 +106,11 @@ $selector: 'art';
                             top: 6px;
                         }
                         @media screen and (min-width: 530px) {
-                            color: #fff;
                             margin: {
                                 bottom: 10px;
                                 top: 0;
                             }
-                            text-shadow: 0 1px 0 #000;
+                            text-shadow: 0 1px 0 #fff;
                         }
                     }
                     &_day {
@@ -121,8 +120,7 @@ $selector: 'art';
                             size: 16px;
                         }
                         @media screen and (min-width: 530px) {
-                            color: #bbb;
-                            text-shadow: 0 1px 0 #000;
+                            text-shadow: 0 1px 0 #fff;
                         }
                     }
                 }

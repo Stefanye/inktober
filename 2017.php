@@ -160,8 +160,8 @@
             foreach ($kepek as $kep) {
         ?>
                 <figure class="art_wrapper_content">
-                    <a class="art_wrapper_content_link" href="/img/2017/<?= $kep['filename'] ?>" data-lightbox="inktober2017">
-                        <img class="art_wrapper_content_link_image" src="/img/2017/<?= $kep['filename'] ?>" alt="<?= $kep['title']; ?>">
+                    <a class="art_wrapper_content_link otherStyle" href="/img/2017/<?= $kep['filename'] ?>" data-lightbox="inktober2017">
+                        <img class="art_wrapper_content_link_image" src="/img/2017/thumbnail/<?= $kep['filename'] ?>" alt="<?= $kep['title']; ?>">
                         <figcaption class="art_wrapper_content_link_caption">
                             <cite class="art_wrapper_content_link_caption_title"><?= $kep['title']; ?></cite>
                             <span class="art_wrapper_content_link_caption_day"><?= $kep['date']; ?></span>
